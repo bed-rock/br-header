@@ -2,9 +2,8 @@
 @import 'variables';
 
 :host {
-  flex-basis: 100%;
   display: flex;
-  min-height: $header_height;
+  flex-basis: $header_height;
   background: $header_bg;
   flex-wrap: wrap;
 
