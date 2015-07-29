@@ -3,8 +3,8 @@
 
 :host {
   display: flex;
-  flex-basis: $header_height;
-  background: $header_bg;
+  flex-basis: $header-height;
+  background: $header-background;
   flex-wrap: wrap;
 
   @media (min-width: $screen-phone + 1) {
@@ -18,7 +18,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  min-height: $header_height;
+  min-height: $header-height;
   flex-shrink: 0;
 
   &.nav__header {
@@ -75,7 +75,7 @@
     img {
       display: block;
       max-width: 100%;
-      max-height: $header_height / 1.66;
+      max-height: $header-height / 1.66;
     }
   }
 
@@ -83,9 +83,10 @@
     display: flex;
     flex-shrink: 0;
     align-items: center;
+    min-width: 56px;
     padding: 0 1rem;
-    color: $header_link_color;
-    color: $header_link_color;
+    color: $header-link-color;
+    color: $header-link-color;
     text-align: center;
     text-decoration: none;
     appearance: none;
@@ -94,15 +95,15 @@
     border: none;
 
     &:hover {
-      color: darken( $header_link_color, 40% );
+      color: darken( $header-link-color, 40% );
       background: rgba(black, 0.1);
       text-decoration: none;
     }
 
-    &.nav-btn_toogle {
-      @media (min-width: $screen-tablet + 1) {
-        display: none;
-      }
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
     }
 
   }
