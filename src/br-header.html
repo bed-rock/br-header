@@ -1,4 +1,5 @@
 <link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../br-icons/src/br-icons.html">
 
 <dom-module id="br-header">
 
@@ -6,57 +7,57 @@
 
 <template>
 
-  <ul class="nav nav__header">
-    <li>
-      <button class="nav-btn" onclick="document.querySelector('br-nav')._toggleMenu();">
-        <svg>
-          <use xlink:href="../../br-icons/svgdefs.svg#icon-menu"></use>
-        </svg>
+  <div class="group__logo">
+    <div class="item">
+      <button class="btn" onclick="document.querySelector('br-nav')._toggleMenu();">
+        <br-icons class="btn-icon" icon="br-icons:menu"></br-icons>
       </button>
-    </li>
-    <li class="nav-logo">
-      <a href="/">
+    </div>
+    <div class="item__logo">
+      <a href="/" class="btn">
         <img src="http://azpanelh.azurewebsites.net/Assets/img/logo_azimutit.png" alt="Logo">
       </a>
-    </li>
-  </ul>
-  <ul class="nav nav__control_area">
-    <li>
-      <a href="#" class="nav-btn">
-        <i class="nav-btn-icon fa fa-pie-chart"></i>
-        <span class="nav-btn-text">Gerencial</span>
+    </div>
+  </div>
+
+  <div class="group__control_area">
+    <div class="item">
+      <a href="#" class="btn">
+        <br-icons icon="br-icons:pie-chart1" class="btn-icon"></br-icons>
+        <span class="btn-text">Gerencial</span>
       </a>
-    </li>
-    <li>
-      <a href="#" class="nav-btn">
-        <i class="nav-btn-icon fa fa-dollar"></i>
-        <span class="nav-btn-text">Financeiro</span>
+    </div>
+    <div class="item">
+      <a href="#" class="btn">
+        <br-icons icon="br-icons:line-bar-chart1" class="btn-icon"></br-icons>
+        <span class="btn-text">Financeiro</span>
       </a>
-    </li>
-  </ul>
-  <div class="nav nav__search">
+    </div>
+  </div>
+
+  <div class="item__search">
     <input type="text" placeholder="Busque por um cliente para visualizar sua carteira">
   </div>
-  <ul class="nav nav__right">
-    <li class="visible-tablet">
-      <button class="nav-btn">
-        <i class="nav-btn-icon fa fa-globe"></i>
-        &nbsp;<i class="fa fa-caret-down"></i>
+
+  <div class="group__right">
+    <div class="item  visible-tablet">
+      <button class="btn">
+        <br-icons icon="br-icons:globe" class="btn-icon"></br-icons>
+        <i class="icon-caret"></i>
       </button>
-    </li>
-    <li>
-      <button class="nav-btn">
-        <i class="nav-btn-icon fa fa-th"></i>
+    </div>
+    <div class="item">
+      <button class="btn">
+        <br-icons icon="br-icons:apps" class="btn-icon"></br-icons>
       </button>
-    </li>
-    <li class="visible-tablet">
-      <button class="nav-btn">
-        <i class="nav-btn-icon fa fa-user"></i>
-        &nbsp;<i class="fa fa-caret-down"></i>
+    </div>
+    <div class="item  visible-tablet">
+      <button class="btn">
+        <br-icons icon="br-icons:user" class="btn-icon"></br-icons>
+        <i class="icon-caret"></i>
       </button>
-    </li>
-    <li><button class="nav-btn nav-btn_toogle"><i class="nav-btn-icon fa fa-bars"></i></button></li>
-  </ul>
+    </div>
+  </div>
 
 </template>
 
