@@ -1,5 +1,6 @@
 <link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../../br-icons/src/br-icons.html">
+<link rel="import" href="../../br-apps-navigation/src/br-apps-navigation.html">
 
 <dom-module id="br-header">
 
@@ -20,7 +21,7 @@
     </div>
   </div>
 
-  <div class="group__control_area">
+  <!-- <div class="group__control_area">
     <div class="item">
       <a href="#" class="btn">
         <br-icons icon="br-icons:pie-chart1" class="btn-icon"></br-icons>
@@ -33,7 +34,7 @@
         <span class="btn-text">Financeiro</span>
       </a>
     </div>
-  </div>
+  </div> -->
 
   <div class="item__search">
     <input type="text" placeholder="Busque por um cliente para visualizar sua carteira">
@@ -47,17 +48,30 @@
       </button>
     </div>
     <div class="item">
-      <button class="btn">
-        <br-icons icon="br-icons:apps" class="btn-icon"></br-icons>
-      </button>
-    </div>
-    <div class="item  visible-tablet">
-      <button class="btn">
-        <br-icons icon="br-icons:user" class="btn-icon"></br-icons>
-        <i class="icon-caret"></i>
-      </button>
-    </div>
+      <!-- <button class="btn"> -->
+        <br-apps-navigation position="right" class="btn"
+        model={{value}}
+        options='[
+        {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+        {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+        {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+        {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+        {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+        {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+        {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+        {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+        {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"}]'
+        icon="br-icons:apps">
+      </br-apps-navigation>
+    <!-- </button> -->
   </div>
+  <div class="item  visible-tablet">
+    <button class="btn">
+      <br-icons icon="br-icons:user" class="btn-icon"></br-icons>
+      <i class="icon-caret"></i>
+    </button>
+  </div>
+</div>
 
 </template>
 

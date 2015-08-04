@@ -5,10 +5,11 @@
   display: flex;
   flex-basis: $header-height;
   background: $header-background;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 100%;
 
   @media (min-width: $screen-phone + 1) {
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
   }
 }
 
@@ -23,23 +24,13 @@
 
   &__logo {
     @extend .group;
-    flex-shrink: 2;
-  }
-
-  &__control_area {
-    @extend .group;
     flex-shrink: 1;
-    order: 99;
-    justify-content: space-between;
-
-    @media (min-width: $screen-phone + 1) {
-      order: 0;
-    }
   }
 
   &__right {
     @extend .group;
-    margin-left: auto;
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 }
 
@@ -52,6 +43,10 @@
   &__logo {
     @extend .item;
 
+    .btn {
+      flex-shrink: 1;
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -63,7 +58,7 @@
     @extend .item;
     display: none;
 
-    @media (min-width: $screen-tablet + 1) {
+    @media (min-width: $screen-desktop) {
       display: flex;
       flex-grow: 1;
       align-items: center;
@@ -81,6 +76,7 @@
       border-radius: 2px;
       border: $input-border-width solid $input-border-color;
       background: $input-backgroung-color;
+      box-shadow: none;
       transition: $transition;
 
       &:hover {
