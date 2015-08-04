@@ -19,25 +19,12 @@
       </a>
     </div>
   </div>
-
-  <div class="group__control_area">
-    <div class="item">
-      <a href="#" class="btn">
-        <br-icons icon="br-icons:pie-chart1" class="btn-icon"></br-icons>
-        <span class="btn-text">Gerencial</span>
-      </a>
+  
+  <template is="dom-if" if="{{showSearch}}">
+    <div class="item__search">
+      <input type="text" placeholder="Busque por um cliente para visualizar sua carteira">
     </div>
-    <div class="item">
-      <a href="#" class="btn">
-        <br-icons icon="br-icons:line-bar-chart1" class="btn-icon"></br-icons>
-        <span class="btn-text">Financeiro</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="item__search">
-    <input type="text" placeholder="Busque por um cliente para visualizar sua carteira">
-  </div>
+  </template>
 
   <div class="group__right">
     <div class="item  visible-tablet">
@@ -63,7 +50,18 @@
 
 <script>
   Polymer({
-    is: 'br-header'
+    is: 'br-header',
+
+    properties: {
+
+      showSearch: {
+        type: Boolean,
+        default: false
+      },
+
+    },
+
+
   });
 </script>
 
