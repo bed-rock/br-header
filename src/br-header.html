@@ -1,6 +1,7 @@
 <link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../../br-icons/src/br-icons.html">
 <link rel="import" href="../../br-apps-navigation/src/br-apps-navigation.html">
+<link rel="import" href="../../br-dropdown-list/src/br-dropdown-list.html">
 
 <dom-module id="br-header">
 
@@ -44,11 +45,15 @@
         icon="br-icons:apps">
       </br-apps-navigation>
     </div>
+
     <div class="item">
-      <button class="btn">
-        <br-icons icon="br-icons:user" class="btn-icon"></br-icons>
-      </button>
+      <br-dropdown-list icon="br-icons:user" position="right" class="btn"
+        options='[
+        {"label": "Minha conta", "link":"/account"},
+        {"label": "Sair", "link":"/logout"}
+        ]'></br-dropdown-list>
     </div>
+
   </div>
 
 </template>
