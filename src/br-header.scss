@@ -6,123 +6,108 @@
   flex-basis: $header-height;
   background: $header-background;
   flex-wrap: nowrap;
+  justify-content: space-between;
   width: 100%;
 
-  @media (min-width: $screen-phone + 1) {
-    // flex-wrap: nowrap;
-  }
-}
+  ::content {
 
-.group {
-  display: flex;
-  align-items: stretch;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  height: $header-height;
-  flex-shrink: 0;
+    .group {
+      display: flex;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      height: $header-height;
+      flex-shrink: 0;
 
-  &__logo {
-    @extend .group;
-    flex-shrink: 1;
-  }
+      &__left {
+        @extend .group;
+      }
 
-  &__right {
-    @extend .group;
-    flex-grow: 1;
-    justify-content: flex-end;
-  }
-}
+      &__center {
+        @extend .group;
+        flex-grow: 1;
+      }
 
+      &__right {
+        @extend .group;
+      }
+    }
 
-.item {
-  display: flex;
-  align-items: stretch;
-  height: $header-height;
+    .logo {
+      @extend .btn;
+      display: none !important;
 
-  &__logo {
-    @extend .item;
+      @media (min-width: $screen-phone) {
+        display: flex !important;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: $header-height - 16;
+      }
+    }
 
     .btn {
-      flex-shrink: 1;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      max-height: $header-height - 16;
-    }
-  }
-
-  &__search {
-    @extend .item;
-    display: none;
-
-    @media (min-width: $screen-desktop) {
+      position: relative;
       display: flex;
-      flex-grow: 1;
+      flex-shrink: 0;
       align-items: center;
-      min-width: 500px;
-      max-width: 600px;
+      justify-content: center;
+      min-width: 56px;
       padding: 0 1rem;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      height: $header-height - 16;
-      line-height: $header-height - 16;
-      padding: 0;
-      text-indent: 1rem;
-      font-size: 1rem;
-      border-radius: 2px;
-      border: $input-border-width solid $input-border-color;
-      background: $input-backgroung-color;
-      box-shadow: none;
-      transition: $transition;
+      color: $header-link-color;
+      color: $header-link-color;
+      text-decoration: none;
+      appearance: none;
+      cursor: pointer;
+      background: none;
+      border: none;
 
       &:hover {
-        border-color: $input-border-color-hover;
-        background: $input-backgroung-color-hover;
+        color: darken( $header-link-color, 40% );
+        background: rgba(black, 0.1);
+        text-decoration: none;
       }
-      &:focus {
-        outline: none;
-        border-color: $input-border-color-focus;
-        background: $input-backgroung-color-focus;
+
+    }
+
+    .btn__search {
+      @extend .btn;
+      @media (min-width: $screen-tablet + 1) {
+        display: none !important;
       }
     }
+
+    input {
+      display: none;
+      @media (min-width: $screen-tablet + 1) {
+        display: flex;
+        flex-grow: 1;
+        align-self: center;
+        margin: 0 1rem;
+        // min-width: 500px;
+        max-width: 600px;
+        height: $header-height - 16;
+        line-height: $header-height - 16;
+        text-indent: 1rem;
+        border-radius: 2px;
+        background: $input-backgroung-color;
+        box-shadow: none;
+        transition: $transition;
+
+        &:hover {
+          background: $input-backgroung-color-hover;
+        }
+        &:focus {
+          background: $input-backgroung-color-focus;
+          box-shadow: none;
+        }
+      }
+
+    }
+
   }
-}
-
-
-.btn {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 56px;
-  padding: 0 1rem;
-  color: $header-link-color;
-  color: $header-link-color;
-  text-decoration: none;
-  appearance: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-
-  &:hover {
-    color: darken( $header-link-color, 40% );
-    background: rgba(black, 0.1);
-    text-decoration: none;
-  }
 
 }
-
-.btn-icon {
-  fill: currentColor;
-}
-
-.btn-text {
-  margin-left: 6px;
-}
-

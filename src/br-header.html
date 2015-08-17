@@ -1,7 +1,4 @@
 <link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../../br-icons/src/br-icons.html">
-<link rel="import" href="../../br-apps-navigation/src/br-apps-navigation.html">
-<link rel="import" href="../../br-dropdown-list/src/br-dropdown-list.html">
 
 <dom-module id="br-header">
 
@@ -9,74 +6,20 @@
 
 <template>
 
-  <div class="group__logo">
-    <div class="item">
-      <!-- <button class="btn" onclick="document.querySelector('br-nav')._toggleMenu();">
-        <br-icons class="btn-icon" icon="br-icons:menu"></br-icons>
-      </button> -->
-      <br-nav class="btn"
-        items='[{ "label":"Gerencial", "link":"#", "group":"true"},
-                { "label":"Patrimônio", "link":"#", "icon":"br-icons:user",
-                  "submenu":[
-                    {"label":"Item 01.1", "link":"#"},
-                    {"label":"Item 01.2", "link":"#"},
-                    {"label":"Item 01.3", "link":"#"}
-                  ]},
-                {"label":"Clientes", "link":"#", "icon":"br-icons:user"},
-                {"label":"NET", "link":"#", "icon":"br-icons:user",
-                "submenu":[
-                    {"label":"Item 03.1", "link":"#"},
-                    {"label":"Item 03.2", "link":"#"},
-                    {"label":"Item 03.3", "link":"#"}
-                ]},
-                { "label":"Financeiro", "link":"#", "group":"true"},
-                { "label":"Rebate", "link":"#", "icon":"br-icons:user",
-                  "submenu":[
-                    {"label":"Item 01.1", "link":"#"},
-                    {"label":"Item 01.2", "link":"#"},
-                    {"label":"Item 01.3", "link":"#"}
-                  ]},
-                {"label":"Clientes", "link":"#", "icon":"br-icons:user"},
-                {"label":"Fundos", "link":"#", "icon":"br-icons:user",
-                "submenu":[
-                    {"label":"Item 03.1", "link":"#"},
-                    {"label":"Item 03.2", "link":"#"},
-                    {"label":"Item 03.3", "link":"#"}
-                ]}]'>
-      </br-nav>
-    </div>
-    <div class="item__logo">
-      <a href="/" class="btn">
-        <img src="http://azpanelh.azurewebsites.net/Assets/img/logo_azimutit.png" alt="Logo">
-      </a>
-    </div>
-  </div>
+  <content select=".group__left">
+  </content>
 
-  <template is="dom-if" if="{{showSearch}}">
-    <div class="item__search">
-      <input type="text" placeholder="Busque por um cliente para visualizar sua carteira">
-    </div>
-  </template>
+  <content select=".group__center">
+  </content>
 
-  <div class="group__right">
-    <div class="item">
-     <content>
-     </content>
-    </div>
-  </div>
+  <content select=".group__right">
+  </content>
 
 </template>
 
 <script>
   Polymer({
-    is: 'br-header',
-
-    properties: {
-      showSearch: {
-        type: Boolean,
-        default: false
-      }
-    }
+    is: 'br-header'
   });
 </script>
 
