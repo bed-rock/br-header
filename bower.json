@@ -1,12 +1,12 @@
 {
   "name": "br-header",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "authors": [
     "cbfranca <cleidsonbf@gmail.com>",
     "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
   ],
-  "description": "Vertical navigation built with polymer",
-  "main": "br-nav.html",
+  "description": "",
+  "main": "br-header.html",
   "keywords": [
     "webcomponents",
     "polymer",
@@ -22,6 +22,6 @@
     "tests"
   ],
    "dependencies": {
-    "bedrock-base": "*"
+    "bedrock-base": "~1.0.0"
   }
 }
