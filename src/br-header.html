@@ -1,4 +1,5 @@
 <link rel="import" href="../../polymer/polymer.html">
+<!-- <link rel="import" href="../../br-icons/src/br-icons.html"> -->
 
 <dom-module id="br-header">
 
@@ -6,20 +7,32 @@
 
 <template>
 
-  <content select=".group__left">
-  </content>
+    <content select=".group__left">
+    </content>
 
-  <content select=".group__center">
-  </content>
+    <content select=".group__center">
+    </content>
 
-  <content select=".group__right">
-  </content>
+    <content select=".group__right">
+    </content>
 
 </template>
 
 <script>
   Polymer({
-    is: 'br-header'
+    is: 'br-header',
+
+    properties: {
+      hideIcons: {
+        type: Boolean,
+        value: false
+      }
+    },
+
+    open: function (event) {
+      // this.hideIcons = true;
+      this.$$('br-search').open(event);
+    }
   });
 </script>
 

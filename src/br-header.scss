@@ -80,14 +80,14 @@
       }
     }
 
-    input {
+    .input__search {
       display: none;
+
       @media (min-width: $screen-tablet + 1) {
         display: flex;
         flex-grow: 1;
         align-self: center;
         margin: 0 1rem;
-        // min-width: 500px;
         max-width: 600px;
         height: $header-height - 16;
         line-height: $header-height - 16;
