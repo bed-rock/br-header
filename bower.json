@@ -1,6 +1,6 @@
 {
   "name": "br-header",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "cbfranca <cleidsonbf@gmail.com>",
     "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
@@ -11,7 +11,7 @@
     "webcomponents",
     "polymer",
     "bedrock",
-    "header"    
+    "header"
   ],
   "license": "MIT",
   "ignore": [
