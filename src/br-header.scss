@@ -81,7 +81,7 @@
       }
     }
 
-    .input__search {
+    input[type="text"] {
       display: none;
 
       @media (min-width: $screen-tablet + 1) {
@@ -89,6 +89,7 @@
         flex-grow: 1;
         align-self: center;
         margin: 0 1rem;
+        padding: 0;
         max-width: 600px;
         height: $header-height - 16;
         line-height: $header-height - 16;
@@ -100,6 +101,7 @@
 
         &:hover {
           background: $input-backgroung-color-hover;
+          box-shadow: none;
         }
         &:focus {
           background: $input-backgroung-color-focus;
