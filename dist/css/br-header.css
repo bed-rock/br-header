@@ -86,11 +86,11 @@
     display: none !important;
   }
 }
-:host ::content .input__search {
+:host ::content input[type="text"] {
   display: none;
 }
 @media (min-width: 769px) {
-  :host ::content .input__search {
+  :host ::content input[type="text"] {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -101,6 +101,7 @@
         -ms-flex-item-align: center;
             align-self: center;
     margin: 0 1rem;
+    padding: 0;
     max-width: 600px;
     height: 40px;
     line-height: 40px;
@@ -110,10 +111,11 @@
     box-shadow: none;
     transition: all 0.2s;
   }
-  :host ::content .input__search:hover {
+  :host ::content input[type="text"]:hover {
     background: #fff;
+    box-shadow: none;
   }
-  :host ::content .input__search:focus {
+  :host ::content input[type="text"]:focus {
     background: #fff;
     box-shadow: none;
   }
