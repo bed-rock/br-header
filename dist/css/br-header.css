@@ -9,6 +9,9 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -33,6 +36,19 @@
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+:host ::content .header--title {
+  margin: 0;
+  padding: 1rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 :host ::content .logo {
   display: none !important;
@@ -65,7 +81,6 @@
           justify-content: center;
   min-width: 56px;
   padding: 0 1rem;
-  color: gray;
   color: gray;
   text-decoration: none;
   -webkit-appearance: none;
