@@ -101,41 +101,9 @@
     display: none !important;
   }
 }
-:host ::content input[type="text"] {
-  display: none;
-}
-@media (min-width: 769px) {
-  :host ::content input[type="text"] {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-    margin: 0 1rem;
-    padding: 0;
-    max-width: 600px;
-    height: 40px;
-    line-height: 40px;
-    text-indent: 1rem;
-    border-radius: 2px;
-    background: whitesmoke;
-    box-shadow: none;
-    transition: all 0.2s;
+@media (max-width: 768px) {
+  :host.search_opened ::content .group__left,
+  :host.search_opened ::content .group__right {
+    display: none;
   }
-  :host ::content input[type="text"]:hover {
-    background: #fff;
-    box-shadow: none;
-  }
-  :host ::content input[type="text"]:focus {
-    background: #fff;
-    box-shadow: none;
-  }
-}
-:host.search_opened ::content .group__left,
-:host.search_opened ::content .group__right {
-  display: none;
 }
