@@ -135,3 +135,7 @@
     box-shadow: none;
   }
 }
+:host.search_opened ::content .group__left,
+:host.search_opened ::content .group__right {
+  display: none;
+}
