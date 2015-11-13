@@ -121,4 +121,11 @@
 
   }
 
+  &.search_opened ::content {
+    .group__left,
+    .group__right {
+      display: none;
+    }
+  }
+
 }
